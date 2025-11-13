@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edit Personal Information</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&amp;family=Open+Sans:wght@400;600&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffb347",
+                        "background-light": "#ffffff",
+                        "background-dark": "#1a1a1a",
+                        "text-primary": "#333333",
+                        "text-secondary": "#666666",
+                        "border-default": "#e0e0e0",
+                        "placeholder-text": "#cccccc",
+                    },
+                    fontFamily: {
+                        "display": ["Open Sans", "Inter", "sans-serif"],
+                        "title": ["Comfortaa", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "8px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Open Sans', 'Inter', sans-serif;
+        }
+        .form-input {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 16px;
+        }
+        .form-input::placeholder {
+            color: #cccccc;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #ffb347;
+            box-shadow: none;
+            --tw-ring-shadow: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col font-display text-text-primary dark:text-gray-200">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-border-default bg-background-light p-4 dark:border-gray-700 dark:bg-background-dark">
+<button class="flex size-10 items-center justify-center text-text-primary dark:text-white">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-text-primary dark:text-white" style="font-family: 'Comfortaa', sans-serif;">编辑个人资料</h1>
+<div class="size-10"></div> <!-- Spacer for centering title -->
+</header>
+<!-- Main Content -->
+<main class="flex-grow p-4 pb-28">
+<div class="mx-auto flex max-w-2xl flex-col gap-6">
+<!-- Profile Header -->
+<div class="flex flex-col items-center gap-4 py-4">
+<div class="relative">
+<div class="aspect-square w-24 rounded-full bg-cover bg-center bg-no-repeat" data-alt="User's profile avatar, showing a smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGkZWo86rDeD_uNXEWNmWwvlNlge6Uard04B1EfVbXezgkMRdEpc2MxNcd2eCoY4xP5rQDUFQG2UJfK5oBS0edbYVZwOy12p1E0NGlDjAZs-XkeO4YfBBR1g6Fy93zCKLyxlny1CDMKnUtpV9jsJUC8M21f395PJ8gPDeRrlzUP5dUGmbu9fBNnFKiACm76LIC4DmrUkfyzejihAAgsRFZ1DCcrbUm7fJ1tRsOEfjtztn4HAFuy7hX8Ke5OC4yCPo6QV_wnzQVjTA");'></div>
+<div class="absolute bottom-0 right-0 flex size-8 items-center justify-center rounded-full border-2 border-white bg-primary">
+<span class="material-symbols-outlined text-base text-white">edit</span>
+</div>
+</div>
+</div>
+<!-- Form Fields -->
+<div class="flex flex-col gap-6">
+<!-- Nickname -->
+<div class="flex flex-col gap-2">
+<label class="text-base font-semibold text-text-secondary dark:text-gray-400" for="nickname">昵称</label>
+<input class="form-input w-full bg-background-light text-text-primary dark:bg-gray-800 dark:text-white" id="nickname" maxlength="20" placeholder="2-20个字符" type="text"/>
+</div>
+<!-- Personal Photos -->
+<div class="flex flex-col gap-3">
+<label class="text-base font-semibold text-text-secondary dark:text-gray-400">个人照片 (最多5张)</label>
+<div class="grid grid-cols-3 gap-3">
+<div class="relative aspect-square w-full rounded-lg bg-cover bg-center" data-alt="A photo of the user on a beach" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7SOmKPOYWjVCNOI4qCyDcGPRpLNOl--yYUked5YTvFFf6ElW8Ub_nVeGOEdGASpPq3smk-fzB1ta-79oHK0adG1zt9uGyt25J7LdKNaMFvOh8lNBrSOVpim1fzjSFw3RQwvfT_rGmnKqW8Lkq12ekRHBjd08JhHZbew_jRn-r3_7kGMbtYHR00mmHH5RfVWFoNyc4m62NHvUe2g60ep_hAOvdlKeNZF6mDqoz5kRot8xY4FC-KZl9OvZwX3EtnLgoPtHpHf_Y-i4");'>
+<button class="absolute top-1 right-1 flex size-5 items-center justify-center rounded-full bg-black/50 text-white">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="relative aspect-square w-full rounded-lg bg-cover bg-center" data-alt="A photo of the user hiking in the mountains" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6vr-gl2KSFrsAf44eVU7v30CEgS80ZWa5MnPJLRjR7hRcSoqrkLEQNEdvrjf7DOVCho1BV72lW_WjdwyiLZKM-8ARMf1z1RzR4ONqHwhCP6WOtFFRbL0XifL3cSmUga_fFPtdLkumeIU13Jdvp6vsdofjEQil_BFFaV5FTBjpF130OpeotjMb8ALpX1mi17EO9Y_BdegX6LgoE0oEpVHEzjn_ud1WSSrI0ZGpIYfaMfGP2jHQlQmWgVschN8h_FEe8lmjaYWVc68");'>
+<button class="absolute top-1 right-1 flex size-5 items-center justify-center rounded-full bg-black/50 text-white">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="flex aspect-square w-full cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-border-default bg-gray-50 dark:border-gray-600 dark:bg-gray-800">
+<span class="material-symbols-outlined text-4xl text-placeholder-text">add_photo_alternate</span>
+</div>
+</div>
+</div>
+<!-- What I can offer -->
+<div class="flex flex-col gap-2">
+<label class="text-base font-semibold text-text-secondary dark:text-gray-400" for="offer">我能提供的</label>
+<textarea class="form-input min-h-24 w-full resize-none bg-background-light text-text-primary dark:bg-gray-800 dark:text-white" id="offer" placeholder="介绍一下你的技能、资源或可以提供的帮助..." rows="4"></textarea>
+<p class="text-right text-sm text-placeholder-text">0/500</p>
+</div>
+<!-- What I'm doing -->
+<div class="flex flex-col gap-2">
+<label class="text-base font-semibold text-text-secondary dark:text-gray-400" for="doing">我正在做</label>
+<textarea class="form-input min-h-24 w-full resize-none bg-background-light text-text-primary dark:bg-gray-800 dark:text-white" id="doing" placeholder="可以是你正在进行的项目、学习的技能或探索的方向..." rows="3"></textarea>
+<p class="text-right text-sm text-placeholder-text">0/250</p>
+</div>
+<!-- Personal Hobbies -->
+<div class="flex flex-col gap-3">
+<label class="text-base font-semibold text-text-secondary dark:text-gray-400">个人爱好 (最多6个)</label>
+<div class="flex flex-wrap items-center gap-3 rounded-lg border border-border-default p-3 dark:border-gray-600">
+<div class="flex flex-1 flex-wrap gap-2">
+<div class="flex items-center gap-2 rounded-full bg-[#BEE7B8] px-3 py-1.5 text-sm font-semibold text-green-900">
+<span class="material-symbols-outlined text-base">spa</span>
+<span>冥想</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-[#FFDDC1] px-3 py-1.5 text-sm font-semibold text-orange-900">
+<span class="material-symbols-outlined text-base">draw</span>
+<span>画画</span>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-[#B2EBF2] px-3 py-1.5 text-sm font-semibold text-cyan-900">
+<span class="material-symbols-outlined text-base">music_note</span>
+<span>音乐</span>
+</div>
+</div>
+<button class="text-text-secondary dark:text-gray-400">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</div>
+</div>
+<!-- Collaboration Style -->
+<div class="flex flex-col gap-2">
+<label class="text-base font-semibold text-text-secondary dark:text-gray-400" for="collaboration">合作方式偏好</label>
+<textarea class="form-input w-full resize-none bg-background-light text-text-primary dark:bg-gray-800 dark:text-white" id="collaboration" placeholder="例如：线上协作、项目合伙、自由职业..." rows="2"></textarea>
+<p class="text-right text-sm text-placeholder-text">0/100</p>
+</div>
+<!-- Work Experience -->
+<div class="flex flex-col gap-2">
+<label class="text-base font-semibold text-text-secondary dark:text-gray-400" for="experience">工作经验</label>
+<textarea class="form-input min-h-32 w-full resize-none bg-background-light text-text-primary dark:bg-gray-800 dark:text-white" id="experience" placeholder="分享你的职业经历，帮助大家更好地了解你..." rows="5"></textarea>
+<p class="text-right text-sm text-placeholder-text">0/500</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Footer Button -->
+<footer class="fixed bottom-0 left-0 w-full bg-background-light/80 p-4 backdrop-blur-sm dark:bg-background-dark/80">
+<button class="h-11 w-full rounded-lg bg-primary text-base font-bold text-white shadow-lg shadow-primary/30 transition-opacity disabled:opacity-50">保存</button>
+</footer>
+</div>
+</body></html>

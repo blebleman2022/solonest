@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Solonest Messages</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&amp;family=Open+Sans:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FFB347",
+              "secondary": "#81D4FA",
+              "accent": "#CE93D8",
+              "background-light": "#F5F5F5",
+              "background-dark": "#1F1F1F", // A dark equivalent for F5F5F5
+              "card-light": "#FFFFFF",
+              "card-dark": "#2A2A2A", // A dark equivalent for FFFFFF
+              "text-primary-light": "#333333",
+              "text-primary-dark": "#E0E0E0",
+              "text-secondary-light": "#666666",
+              "text-secondary-dark": "#BDBDBD",
+              "text-auxiliary-light": "#999999",
+              "text-auxiliary-dark": "#828282",
+              "unread": "#FF3B30",
+              "online": "#4CD964",
+            },
+            fontFamily: {
+              "display": ["Comfortaa", "sans-serif"],
+              "body": ["Open Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/css">
+      body {
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Comfortaa', cursive;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col font-body group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-card-light dark:bg-card-dark p-4 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center"></div>
+<h1 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold leading-tight flex-1 text-center">Messages</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-text-primary-light dark:text-text-primary-dark">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+</div>
+</div>
+<!-- Conversation List -->
+<div class="flex flex-col gap-px p-4">
+<!-- List Item 1: Unread with Time -->
+<div class="flex items-center gap-4 bg-card-light dark:bg-card-dark p-4 min-h-[72px] justify-between rounded-lg">
+<div class="flex items-center gap-4">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[50px] w-[50px]" data-alt="Avatar of Eleanor Vance" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2y--Hi3tPLj4IYpy5iIueKyIqHsb-Pa3x0aSa7OBCYGNXvl_rvAZm8p_kHsSn3TzyI9MiVWUZykcMoONGF4kzOZlgObWpGBCmALVuRB_LtJ0Bui18DNMw5SIU8qo2pBz_Wl0IT6K5vXHe_imdijva1VXOuh1gJXb0-RajpCMswWSByowi5r8xFHSNJ6ryqSI3zVvQ76oWSW6elcYb39kZvuPoelEblEAklvStAIrvnR9UmDEp4BoCCjCcMTsbZmCSpSfcO5efSjs");'></div>
+<div class="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-online border-2 border-card-light dark:border-card-dark"></div>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-semibold leading-normal line-clamp-1">Eleanor Vance</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-1">Sounds great! Let's meet up then.</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-2">
+<p class="text-text-auxiliary-light dark:text-text-auxiliary-dark text-xs font-normal leading-normal">10:45 AM</p>
+<div class="w-2.5 h-2.5 rounded-full bg-unread"></div>
+</div>
+</div>
+<!-- List Item 2: Read with Day -->
+<div class="flex items-center gap-4 bg-card-light dark:bg-card-dark p-4 min-h-[72px] justify-between rounded-lg">
+<div class="flex items-center gap-4">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[50px] w-[50px]" data-alt="Avatar of Marcus Holloway" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3jEtJpLx4cSq18DCk1cXrnjTPcpxYyV0_GjaF6gFs4dXrzd9_HPCePdCioyeA7T0MX_paLMOvAb89lD5gkUPudVG3p_IJCnMxo59F3b0t3nNo-Ebo4ZGU-c6hD7ytmehFDxqS8AKZH_OLAxQUIst6B7IGomjjPZ5vJnyobyn3bH7RBwLniFkqPICztKYE8ZciIpheR1TtKbMZnB890PuPJwDGZsifZAdMxefb29_tkBRUWLMevMz7yGDyM_mGltp-RiZEM4Vfsjk");'></div>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-semibold leading-normal line-clamp-1">Marcus Holloway</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-1">Hey, did you see the new movie trailer?</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-2">
+<p class="text-text-auxiliary-light dark:text-text-auxiliary-dark text-xs font-normal leading-normal">Yesterday</p>
+<div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>
+</div>
+</div>
+<!-- List Item 3: Unread -->
+<div class="flex items-center gap-4 bg-card-light dark:bg-card-dark p-4 min-h-[72px] justify-between rounded-lg">
+<div class="flex items-center gap-4">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[50px] w-[50px]" data-alt="Avatar of Chloe Price" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDb0kyLrnRW0NtHwPN04GUqMXjRY8j5EpLxq_rbt9nNKCy9HetwKlcq3kZ0GfkovTpWfFTIPDLDvpXAqqPhhnvxg2J__22mpjq1d77R16ESF7urotC-OX5wKOOADrUckFl9ZJEN0BnetDx9BLEQe8wE41PxkdgPOccghFSeudvnUVknUM4PkjVF2lIngxxcFXUIpKbGx4taeParhGp-ck0-7mrhaMDbFAfAyc1evbj5PBlG1-0HL8GG8LQRUOIh3NRMB1HedmbGzw");'></div>
+<div class="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-online border-2 border-card-light dark:border-card-dark"></div>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-semibold leading-normal line-clamp-1">Chloe Price</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-1">Awesome, I'll send you the details.</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-2">
+<p class="text-text-auxiliary-light dark:text-text-auxiliary-dark text-xs font-normal leading-normal">Sun</p>
+<div class="w-2.5 h-2.5 rounded-full bg-unread"></div>
+</div>
+</div>
+<!-- List Item 4: Read -->
+<div class="flex items-center gap-4 bg-card-light dark:bg-card-dark p-4 min-h-[72px] justify-between rounded-lg">
+<div class="flex items-center gap-4">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[50px] w-[50px]" data-alt="Avatar of Alex Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnUz708Sum7ILWzkke4LtZyTmqJ5273NO0w6qUPQamcO5cOee95IaNoYiKOIplQXVvjJpsSxN6P_AuskLKuQyfW_vkgEv9-4w224QKZOIBazqSMcQVYF9wiFsSMht_M764OzWkwJE9RwArt6kAxJQnQy-Doz1BBXzSstA03STZ4jSXnPjDdxmE-iqPJCLr0VWajztFBT-TwRDikSAu6c4ZCq1aKBKA65TH48FXdiNe1xS8Xgp2PMQrQ0Xim8xgPaffQytmuklc_n8");'></div>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-semibold leading-normal line-clamp-1">Alex Chen</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-1">Photo</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-2">
+<p class="text-text-auxiliary-light dark:text-text-auxiliary-dark text-xs font-normal leading-normal">23/10/23</p>
+<div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>
+</div>
+</div>
+</div>
+<!-- Empty State (Uncomment to view) -->
+<!-- 
+        <div class="flex flex-1 flex-col items-center justify-center p-4">
+            <div class="flex flex-col items-center gap-6">
+                <img src="https://stories.freepik.com/storage/11499/speech-bubble-rafiki-9549.png" alt="An illustration of a person holding a large speech bubble, symbolizing communication." class="w-full max-w-[280px]">
+                <div class="flex max-w-[480px] flex-col items-center gap-2">
+                    <h2 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight text-center">No Messages Yet</h2>
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal max-w-[480px] text-center">Start a conversation to see your messages here!</p>
+                </div>
+                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-wide shadow-sm">
+                    <span class="truncate">Find Friends</span>
+                </button>
+            </div>
+        </div>
+        -->
+</div>
+</body></html>

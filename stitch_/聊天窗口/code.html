@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Solonest Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&amp;family=Open+Sans:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ffb247",
+              "background-light": "#ffffff",
+              "background-dark": "#1a1a1a",
+              "text-primary": "#333333",
+              "text-secondary": "#CCCCCC",
+              "border-color": "#E0E0E0",
+              "bubble-other": "#F5F5F5",
+              "text-primary-dark": "#e0e0e0",
+              "text-secondary-dark": "#888888",
+              "border-color-dark": "#444444",
+              "bubble-other-dark": "#2c2c2c",
+            },
+            fontFamily: {
+              "display": ["Comfortaa", "sans-serif"],
+              "body": ["Open Sans", "sans-serif"],
+            },
+            borderRadius: {"DEFAULT": "8px", "lg": "12px", "xl": "16px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex h-screen w-full flex-col font-body group/design-root overflow-hidden" style='font-family: "Open Sans", "Noto Sans", sans-serif;'>
+<!-- Top App Bar -->
+<div class="flex items-center border-b border-border-color dark:border-border-color-dark bg-background-light dark:bg-background-dark p-4 shrink-0">
+<div class="text-text-primary dark:text-text-primary-dark flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</div>
+<div class="flex flex-col flex-1 items-center -ml-10">
+<h2 class="text-text-primary dark:text-text-primary-dark text-lg font-bold leading-tight" style='font-family: "Comfortaa", sans-serif;'>Jane Doe</h2>
+<p class="text-green-500 text-sm font-normal leading-normal">Online</p>
+</div>
+</div>
+<!-- Chat Area -->
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<!-- Timestamp -->
+<p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal text-center">10:45 AM</p>
+<!-- Other Party's Message -->
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" data-alt="Avatar of Jane Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4lptmDxofIOr1uF-WNA3kZMjmfowp4aUVtBbui_hJT_dymzX7RV5bjDRnfFMXsYl9zLyAh1lnYMUrPGDwbyPiLQDrT2Iua8fiwAyFk2mKItmh59xmkYPeOrKl6B6D3AufBpb8iLRe3vHPopnQnhOoA1XiUhwezn-R5ttLM4Niga2eGFo3IS4AyjxH2Y7sIqeDrwt-kT3zQcE5hpIGm6IZvvHRSeER-2ctuBOkA_iW3xP6ClsCj3kmDCHSauuPHOGNzD5NAFOVszE");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-base font-normal leading-normal flex max-w-[80%] rounded-lg rounded-bl-none px-4 py-3 bg-bubble-other dark:bg-bubble-other-dark text-text-primary dark:text-text-primary-dark">Hey! How are you doing?</p>
+</div>
+</div>
+<!-- User's Message -->
+<div class="flex items-end gap-3 justify-end">
+<div class="flex flex-1 flex-col gap-1 items-end">
+<p class="text-base font-normal leading-normal flex max-w-[80%] rounded-lg rounded-br-none px-4 py-3 bg-primary text-white">I'm doing great, thanks for asking! How about you?</p>
+</div>
+</div>
+<!-- Other Party's Message -->
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" data-alt="Avatar of Jane Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhTPBCmmBgyFZIjnDiVhuuhp2dHBj5QyDsR_kqiXeo8TY2_2yNHSc2DLChyR0DgZsP1ubxyvJ_qhDU4jcWshnJb567y5CNxdgsklEuCInDxx4gcfl1hVEFCjLcC6A3FFDsjFi1IwDC_x0KSy_x5FR9vEBx31u7ENzz6HCZHZm57pXT_6S3xHLNp8sCkJUQYeNAnOkIBw4ybU-nBxfYhd_pvghrRAorpoL1XkAEmMVfH6w267H0d1QuwpVXLKTdymg_8DJejCvWz6U");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-base font-normal leading-normal flex max-w-[80%] rounded-lg rounded-bl-none px-4 py-3 bg-bubble-other dark:bg-bubble-other-dark text-text-primary dark:text-text-primary-dark">I'm doing well, just working on a new design project. It's been really inspiring!</p>
+</div>
+</div>
+<!-- Timestamp -->
+<p class="text-text-secondary dark:text-text-secondary-dark text-sm font-normal leading-normal text-center">10:50 AM</p>
+<!-- User's Message -->
+<div class="flex items-end gap-3 justify-end">
+<div class="flex flex-1 flex-col gap-1 items-end">
+<p class="text-base font-normal leading-normal flex max-w-[80%] rounded-lg rounded-br-none px-4 py-3 bg-primary text-white">That sounds amazing! I'd love to see it sometime.</p>
+</div>
+</div>
+<!-- Other Party's Message with two bubbles -->
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" data-alt="Avatar of Jane Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFuzNLwyldsc5BksKOr_upvjBGS_k26osL3tMhnsNfs8k0kI987sPV4h4zqnrE3bSUef55jR_7OmpenUsLMINKHWys1vEghNb_kELdI_xBkzvVcTe6u5snuRgEGcc3lGt-2KsW-2cDThnAG2H6NensaKpkKK2CrFG4gfjKsdKEkJ9k-wjI41lFeBGsQOyyergrxZl4JO3c7ajfU7a6HpHo7zKYxLSzMAncBDtPBlClT6DMoQTa8TWXZCKRJSXBpbb3HItiMrIwguE");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-base font-normal leading-normal flex max-w-[80%] rounded-t-lg rounded-br-lg px-4 py-3 bg-bubble-other dark:bg-bubble-other-dark text-text-primary dark:text-text-primary-dark">Definitely! I'll send you a sneak peek later.</p>
+<p class="text-base font-normal leading-normal flex max-w-[80%] rounded-b-lg rounded-tr-lg px-4 py-3 bg-bubble-other dark:bg-bubble-other-dark text-text-primary dark:text-text-primary-dark">Are you free this weekend?</p>
+</div>
+</div>
+</div>
+<!-- Input Bar -->
+<div class="flex items-center gap-3 bg-background-light dark:bg-background-dark p-4 border-t border-border-color dark:border-border-color-dark shrink-0">
+<div class="flex items-center flex-1 bg-background-light dark:bg-background-dark border border-border-color dark:border-border-color-dark rounded-lg focus-within:border-primary transition-colors">
+<input class="flex-1 w-full bg-transparent p-3 text-base text-text-primary dark:text-text-primary-dark placeholder-text-secondary dark:placeholder-text-secondary-dark border-none focus:ring-0" placeholder="Type a message..." type="text"/>
+<button class="p-3 text-text-primary dark:text-text-primary-dark">
+<span class="material-symbols-outlined text-2xl">mood</span>
+</button>
+</div>
+<button class="bg-primary text-white w-12 h-12 flex items-center justify-center rounded-lg shrink-0">
+<span class="material-symbols-outlined text-2xl">send</span>
+</button>
+</div>
+</div>
+</body></html>

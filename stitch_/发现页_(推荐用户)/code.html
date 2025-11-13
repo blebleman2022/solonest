@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Solonest Discover</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&amp;family=Open+Sans:wght@400&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#EA2831", "secondary-blue": "#81D4FA", "accent-lavender": "#CE93D8", "background-light": "#f8f6f6", "background-dark": "#211111", "text-primary": "#333333", "text-secondary": "#666666", "text-auxiliary": "#999999", "online-green": "#4CAF50", "card-light": "#FFFFFF", "card-dark": "#2c2c2c", "text-primary-dark": "#E0E0E0", "text-secondary-dark": "#BDBDBD", "text-auxiliary-dark": "#828282"}, fontFamily: {display: "Plus Jakarta Sans", body: ["Open Sans", "sans-serif"], "default": ["-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "sans-serif"]}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, boxShadow: {card: "0 2px 8px rgba(0, 0, 0, 0.08)"}}}};</script>
+<style>
+    .font-chinese { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", sans-serif; }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-default bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex flex-col bg-background-light dark:bg-background-dark pt-4">
+<div class="flex items-center px-4 pb-2 justify-between">
+<h1 class="text-text-primary dark:text-text-primary-dark text-xl font-display font-bold leading-tight tracking-tight">Discover</h1>
+</div>
+<!-- Search Bar -->
+<div class="px-4 pb-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-text-auxiliary dark:text-text-secondary-dark flex border-none bg-card-light dark:bg-card-dark items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-text-primary dark:text-text-primary-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-card-light dark:bg-card-dark h-full placeholder:text-text-auxiliary dark:placeholder:text-text-auxiliary-dark px-4 rounded-l-none border-l-0 pl-2 text-sm font-normal font-chinese leading-normal" placeholder="搜索用户任何信息" value=""/>
+</div>
+</label>
+</div>
+</div>
+<!-- Main Content: User List -->
+<main class="flex flex-col gap-3 px-4 pb-4">
+<!-- User Card 1 -->
+<div class="flex gap-4 bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-card">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[60px] w-[60px]" data-alt="Profile picture of Alex Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJQcv0yv9xgG_9uEz8Pt_USxj5wSlwfaq91toNHa_dzAmaO64MNJe4jv3xdPrkvDKH73lsyv34wD1sv8iS3-T22ut9hcfTKrLtuVQQk8rnfmT0q0qPRiiVd7RdqqD4flgRv-6FfI-rV_qzoFqI3aUSUmpygfv-DiH8rbvICLCiKOja10El6OBo4v0b-s6nw_wN8Pu-uxCe4xlF-vKdTvew0ri9GAyn--OvMmYER9xPGty2IpmaaBJ_U6oc-IZyalL3PHILOThtpqQ");'></div>
+<div class="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-online-green border-2 border-card-light dark:border-card-dark"></div>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-1.5 overflow-hidden">
+<div class="flex justify-between items-center">
+<p class="text-text-primary dark:text-text-primary-dark text-base font-display font-bold leading-normal truncate">Alex Chen</p>
+<div class="flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-sm text-text-secondary dark:text-text-secondary-dark">location_on</span>
+<p class="text-text-secondary dark:text-text-secondary-dark text-sm font-body font-normal leading-normal">Shanghai</p>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-2 pb-1 -mb-1">
+<span class="whitespace-nowrap text-xs font-body text-primary border border-primary/50 bg-primary/10 dark:bg-primary/20 px-2 py-0.5 rounded-full">UI/UX Design</span>
+<span class="whitespace-nowrap text-xs font-body text-secondary-blue border border-secondary-blue/50 bg-secondary-blue/10 dark:bg-secondary-blue/20 px-2 py-0.5 rounded-full">Coffee Lover</span>
+<span class="whitespace-nowrap text-xs font-body text-accent-lavender border border-accent-lavender/50 bg-accent-lavender/10 dark:bg-accent-lavender/20 px-2 py-0.5 rounded-full">Cat Person</span>
+<span class="whitespace-nowrap text-xs font-body text-text-secondary dark:text-text-secondary-dark border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded-full">Startups</span>
+</div>
+<p class="text-text-secondary dark:text-text-secondary-dark text-sm font-chinese font-normal leading-relaxed line-clamp-2">我能提供: Brand identity design and UI/UX consultations for startups.</p>
+</div>
+</div>
+<!-- User Card 2 -->
+<div class="flex gap-4 bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-card">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[60px] w-[60px]" data-alt="Profile picture of Luna Wang" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHoAEHhhOHUelYC4KEG98rs86ZYPhyeCe-cOy1VAmSQfgt0EDxRGY7VSAKlFJ7PF6pHTui3yxkV0F1CRYCKdtKieG09l7TrlEkFgrZ6Jk4CiF3AQwuF9x9cseJPYMRGxyqP5pAVzNXF-piwwVFG3vRNkmTLyiosYr5IU95A6sf6TUVNuZHkZSNM1ad_Gyi-kSPsxgXtkXMglhqKesDj3muqdw--E5PUwspf1uKI_XEOPmXMeFp3zrvr5bKcXJp4PN73o-s5wpHVbc");'></div>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-1.5 overflow-hidden">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-text-primary dark:text-text-primary-dark text-base font-display font-bold leading-normal truncate">Luna Wang</p>
+<p class="text-text-auxiliary dark:text-text-auxiliary-dark text-xs font-chinese">5分钟前在线</p>
+</div>
+<div class="flex items-center gap-1 shrink-0 pt-1">
+<span class="material-symbols-outlined text-sm text-text-secondary dark:text-text-secondary-dark">location_on</span>
+<p class="text-text-secondary dark:text-text-secondary-dark text-sm font-body font-normal leading-normal">Beijing</p>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-2 pb-1 -mb-1">
+<span class="whitespace-nowrap text-xs font-body text-primary border border-primary/50 bg-primary/10 dark:bg-primary/20 px-2 py-0.5 rounded-full">Photography</span>
+<span class="whitespace-nowrap text-xs font-body text-secondary-blue border border-secondary-blue/50 bg-secondary-blue/10 dark:bg-secondary-blue/20 px-2 py-0.5 rounded-full">Travel</span>
+<span class="whitespace-nowrap text-xs font-body text-accent-lavender border border-accent-lavender/50 bg-accent-lavender/10 dark:bg-accent-lavender/20 px-2 py-0.5 rounded-full">Foodie</span>
+</div>
+<p class="text-text-secondary dark:text-text-secondary-dark text-sm font-chinese font-normal leading-relaxed line-clamp-2">我能提供: Professional event photography and travel tips for Southeast Asia.</p>
+</div>
+</div>
+<!-- User Card 3 -->
+<div class="flex gap-4 bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-card">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[60px] w-[60px]" data-alt="Profile picture of Leo Zhang" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIonFp81LJHeszqR6uN4z1dcNpWz3GVju7CmHOEF1P-bsPbaojkib_vmGNCsm1FYJ9b8jE74N22KOiDNTd_QTju3AOPsXDFP_zkvEfFOhlYdrwcUhTNQHqip3SaS8kVD_rxOsu5O5DDm2iZMOpCMJ8lur9MWlyruoxqYZpL-1QMoO8ECG7oc9fArwbtxvn-8AsfzVEF0y_9u_aww07EgukKh5bbCzYMhSghOcIlRP8EmTBx1U-QeJx0qeO7af82Gj9gPD6X3_Fi9c");'></div>
+<div class="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-online-green border-2 border-card-light dark:border-card-dark"></div>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-1.5 overflow-hidden">
+<div class="flex justify-between items-center">
+<p class="text-text-primary dark:text-text-primary-dark text-base font-display font-bold leading-normal truncate">Leo Zhang</p>
+<div class="flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-sm text-text-secondary dark:text-text-secondary-dark">location_on</span>
+<p class="text-text-secondary dark:text-text-secondary-dark text-sm font-body font-normal leading-normal">Guangzhou</p>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-2 pb-1 -mb-1">
+<span class="whitespace-nowrap text-xs font-body text-primary border border-primary/50 bg-primary/10 dark:bg-primary/20 px-2 py-0.5 rounded-full">Fitness Coach</span>
+<span class="whitespace-nowrap text-xs font-body text-secondary-blue border border-secondary-blue/50 bg-secondary-blue/10 dark:bg-secondary-blue/20 px-2 py-0.5 rounded-full">Marathon Runner</span>
+</div>
+<p class="text-text-secondary dark:text-text-secondary-dark text-sm font-chinese font-normal leading-relaxed line-clamp-2">我能提供: Personalized fitness plans and running coaching for all levels.</p>
+</div>
+</div>
+<!-- User Card 4 -->
+<div class="flex gap-4 bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-card">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-[60px] w-[60px]" data-alt="Profile picture of Chloe Li" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrc_QAfwMGhT_SwHgfakUa_NK5dzShdqLMRlWUbPp9CnozYzLbq0HvNITaLC_PCepWP3TEOzVN2u4vXOix2kBlDMyTAeymgS2GXMpC1gNnbUA5JPiPlhJ-bBoKcGwrPEZVH4qSxJz5nce7pFbAJucTFsNeTvvYbuEiZVpUlBKU8d7UpeBP3ucXEZwhNx2CdVj6E5jYxRrFCwBnK4KB8Uu2KsjQ14_wI9JG5x1ovxDdRwUsHblZdGoLOQIbr2EvCYqAffTZc7vBbno");'></div>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-1.5 overflow-hidden">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-text-primary dark:text-text-primary-dark text-base font-display font-bold leading-normal truncate">Chloe Li</p>
+<p class="text-text-auxiliary dark:text-text-auxiliary-dark text-xs font-chinese">2小时前在线</p>
+</div>
+<div class="flex items-center gap-1 shrink-0 pt-1">
+<span class="material-symbols-outlined text-sm text-text-secondary dark:text-text-secondary-dark">location_on</span>
+<p class="text-text-secondary dark:text-text-secondary-dark text-sm font-body font-normal leading-normal">Shenzhen</p>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-2 pb-1 -mb-1">
+<span class="whitespace-nowrap text-xs font-body text-primary border border-primary/50 bg-primary/10 dark:bg-primary/20 px-2 py-0.5 rounded-full">Baking</span>
+<span class="whitespace-nowrap text-xs font-body text-secondary-blue border border-secondary-blue/50 bg-secondary-blue/10 dark:bg-secondary-blue/20 px-2 py-0.5 rounded-full">Yoga</span>
+<span class="whitespace-nowrap text-xs font-body text-accent-lavender border border-accent-lavender/50 bg-accent-lavender/10 dark:bg-accent-lavender/20 px-2 py-0.5 rounded-full">Gardening</span>
+</div>
+<p class="text-text-secondary dark:text-text-secondary-dark text-sm font-chinese font-normal leading-relaxed line-clamp-2">我能提供: Sourdough baking workshops and tips for urban gardening.</p>
+</div>
+</div>
+<!-- Loading Indicator -->
+<div class="flex justify-center items-center py-6">
+<div class="w-6 h-6 border-2 border-text-auxiliary border-t-primary rounded-full animate-spin"></div>
+</div>
+</main>
+</div>
+</body></html>

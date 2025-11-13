@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Profile - Solonest</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ffb247",
+              "background-light": "#f8f7f5",
+              "background-dark": "#231b0f",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative w-full max-w-md mx-auto min-h-screen flex flex-col group/design-root overflow-x-hidden">
+<!-- Header Section -->
+<header class="relative p-4 pb-0 flex flex-col items-center bg-gradient-to-br from-primary to-[#81D4FA]">
+<div class="flex w-full items-center justify-end absolute top-4 right-4">
+<button class="text-sm font-medium text-white/90">举报</button>
+</div>
+<div class="flex w-full flex-col gap-4 items-center pt-8 pb-4">
+<div class="flex gap-4 flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-20 h-20" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqaoZELyAa0x5jDyb7v_iJ8mlpFpkk97ibxGEUbqina0sVPOgo9sNMTykRlH0FC3KqpJv2iQVVaZbwiuXLKALPIhHRsP79C0aNj-BRL-BbpaQ-IvrO1MtPYVPjEFQHdLYE9W6rN_TctCzADa9XOC4FcEdIDihY_I-HluYxZ8cxTZng0ozufqEpz8IYk6BtYtsT4h6UgEpPZyyoCoyDrJoaQxsrHxInEDIK4qn3ztEmDTNbEO_qtje7Qi-iqwFGbNnn2zO4OoxH_pA");'></div>
+<div class="absolute inset-[-5px] rounded-full border-2 border-transparent bg-gradient-to-br from-primary to-[#81D4FA] bg-clip-border"></div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-white text-xl font-bold leading-tight tracking-[-0.015em] text-center">User Nickname</p>
+<p class="text-white/80 text-sm font-normal leading-normal text-center">Shanghai | Online</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Chips / Tags -->
+<div class="flex gap-3 px-4 py-3 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none]">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4">
+<p class="text-primary text-sm font-medium leading-normal">Designer</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4">
+<p class="text-primary text-sm font-medium leading-normal">Optimist</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4">
+<p class="text-primary text-sm font-medium leading-normal">Coffee Lover</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4">
+<p class="text-primary text-sm font-medium leading-normal">Tech Enthusiast</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 px-4">
+<p class="text-primary text-sm font-medium leading-normal">Traveler</p>
+</div>
+</div>
+<!-- Profile Stats -->
+<div class="flex justify-around items-center gap-3 px-4 py-3">
+<div class="flex flex-1 flex-col gap-1 items-center text-center">
+<p class="text-primary tracking-light text-2xl font-bold leading-tight">154</p>
+<div class="flex items-center gap-2">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">关注数</p>
+</div>
+</div>
+<div class="w-px h-8 bg-gray-200 dark:bg-gray-700"></div>
+<div class="flex flex-1 flex-col gap-1 items-center text-center">
+<p class="text-primary tracking-light text-2xl font-bold leading-tight">892</p>
+<div class="flex items-center gap-2">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">受关注数</p>
+</div>
+</div>
+</div>
+<!-- Segmented Buttons -->
+<div class="flex px-4 py-3">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-gray-200 dark:bg-background-dark p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-background-light dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-[0_1px_3px_rgba(0,0,0,0.1)] has-[:checked]:text-gray-800 dark:has-[:checked]:text-white text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-all">
+<span class="truncate">商业</span>
+<input checked="" class="invisible w-0" name="profile-tab" type="radio" value="商业"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-background-light dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-[0_1px_3px_rgba(0,0,0,0.1)] has-[:checked]:text-gray-800 dark:has-[:checked]:text-white text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-all">
+<span class="truncate">个人</span>
+<input class="invisible w-0" name="profile-tab" type="radio" value="个人"/>
+</label>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="flex-grow p-4 space-y-4">
+<!-- Business Section (Example) -->
+<div class="space-y-4">
+<!-- Section: 我能提供的 -->
+<div class="bg-white dark:bg-gray-800/50 rounded-xl p-4 space-y-2">
+<h3 class="text-gray-800 dark:text-white text-base font-bold">我能提供的</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm">I can provide UI/UX design services for mobile and web applications, focusing on creating intuitive and beautiful user experiences. I also offer brand identity design.</p>
+</div>
+<!-- Section: 我正在做 -->
+<div class="bg-white dark:bg-gray-800/50 rounded-xl p-4 space-y-2">
+<h3 class="text-gray-800 dark:text-white text-base font-bold">我正在做</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm">Currently working as a lead designer at a tech startup, and exploring generative AI art in my spare time.</p>
+</div>
+<!-- Section: 补充资料 -->
+<div class="bg-white dark:bg-gray-800/50 rounded-xl p-4 space-y-3">
+<h3 class="text-gray-800 dark:text-white text-base font-bold">补充资料</h3>
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg bg-cover bg-center" data-alt="Project screenshot 1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1v9fZuvoF5-KLxtVni_Zed4bzb6xIT2T_mzd9tMND5mL264jabrCqRZ9unQOVmapy2nMfGuGYzfpqkJVldoZDzgb-_cclxCiy-LH79RsG-DK4hnCQH6uXJkaNA_9ORxnG8fQDIyYWsTiacRHE1WifuinckJRx-zUJUUCqBR346KeVVgqhOSZEAZSmyFvoQkdmGYgAgkBD8imP7epGUOLQN8Yr781iIlewhDoQjYB8Y_UcQCWLJDFQ6v2kWIJ5dL_fJ1mCdKGXOvI')"></div>
+<div class="aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg bg-cover bg-center" data-alt="Project screenshot 2" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChgUpQedzUlsRboybPu5wajzl4XGn42_G0HFpoP3iXINYASlIsHurGy3ngwqFXUeCZvlcaW5g2oaZ1MRST4UXculUXoHOtzN4Cg4kt1PLQrFdvJN_peVwiObKO7R-QQxqwJ4ggxyVCVjYYleQWEtS5geLhaGaaVhfxXVAhkiPNwu1gvvB_mYv04zpnR6Qqsa2HNJbfby0oqbkvSIpr-u2L7Sh_OfN5CYLFNnyoE6c4Jf2W1WfulqwIFb1gPey5_ZciYzgd0AjiqG0')"></div>
+<div class="aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg bg-cover bg-center" data-alt="Project screenshot 3" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2CeJTS8D-SYYx9P3uKl3AaG1aeg2pl7lwa5dvNfA0KQYdPNIbuRORpV6U242UVJbmv816D-3suInwMQu5fFL8LXh9YtbMN1cJnB9QCVuGyDH2KgHkzNf-0CSizV8jCwevNNAXCmUlqxbC6HClA8sQsNSfky5RzQiMwPAu6gTPVux6j-7xXRrHMnOlrk9XsJ00jHlRPDxG0D-Z2ZM8QdbjOqd8U2RnwfPfv_BPePm7UsQEyghwluY3O_eUAYnw9_UnJitFv-65bvA')"></div>
+</div>
+</div>
+</div>
+<!-- Personal Section (Example) -->
+<!-- This section would be conditionally rendered based on the tab selection -->
+<!--
+            <div class="space-y-4">
+                 <div class="bg-white dark:bg-gray-800/50 rounded-xl p-4 space-y-3">
+                    <h3 class="text-gray-800 dark:text-white text-base font-bold">爱好</h3>
+                    <div class="grid grid-cols-4 gap-4 text-center">
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-900 flex items-center justify-center shadow-[0_2px_4px_rgba(0,0,0,0.1)]"><span class="material-symbols-outlined text-blue-500 dark:text-blue-300">flight_takeoff</span></div>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Travel</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="w-12 h-12 rounded-2xl bg-orange-100 dark:bg-orange-900 flex items-center justify-center shadow-[0_2px_4px_rgba(0,0,0,0.1)]"><span class="material-symbols-outlined text-orange-500 dark:text-orange-300">photo_camera</span></div>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Photography</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="w-12 h-12 rounded-2xl bg-green-100 dark:bg-green-900 flex items-center justify-center shadow-[0_2px_4px_rgba(0,0,0,0.1)]"><span class="material-symbols-outlined text-green-500 dark:text-green-300">hiking</span></div>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Hiking</p>
+                        </div>
+                         <div class="flex flex-col items-center gap-2">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-900 flex items-center justify-center shadow-[0_2px_4px_rgba(0,0,0,0.1)]"><span class="material-symbols-outlined text-purple-500 dark:text-purple-300">music_note</span></div>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Music</p>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="bg-white dark:bg-gray-800/50 rounded-xl p-4 space-y-3">
+                     <h3 class="text-gray-800 dark:text-white text-base font-bold">照片</h3>
+                     <div class="grid grid-cols-3 gap-2">
+                         <div class="aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg bg-cover bg-center" data-alt="User photo 1" style="background-image: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                         <div class="aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg bg-cover bg-center" data-alt="User photo 2" style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                         <div class="aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg bg-cover bg-center" data-alt="User photo 3" style="background-image: url('https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=2823&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                     </div>
+                 </div>
+            </div>
+            -->
+</main>
+<!-- Bottom Action Bar Placeholder -->
+<div class="h-24"></div>
+<!-- Bottom Action Bar -->
+<footer class="fixed bottom-0 left-0 right-0 w-full max-w-md mx-auto bg-background-light dark:bg-background-dark p-4 border-t border-gray-200 dark:border-gray-700">
+<div class="flex items-center gap-3">
+<button class="flex-1 h-11 text-center rounded-lg border border-primary text-primary text-base font-bold transition-colors hover:bg-primary/10">关注</button>
+<button class="flex-[2] h-11 text-center rounded-lg bg-primary text-white text-base font-bold transition-opacity hover:opacity-90">发起聊天</button>
+</div>
+</footer>
+</div>
+</body></html>

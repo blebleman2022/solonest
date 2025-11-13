@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="zh"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Solonest - Demand Square</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Comfortaa:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FFC947",
+                        "secondary": "#FF9A3C",
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#1a1a1a",
+                        "text-heading": "#212529",
+                        "text-body": "#495057",
+                        "text-subtle": "#ADB5BD",
+                    },
+                    fontFamily: {
+                        "display": ["Comfortaa", "sans-serif"],
+                        "body": ["Open Sans", "sans-serif"],
+                        "chinese": ["-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'card': '0 2px 8px rgba(0,0,0,0.08)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .font-chinese {
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col font-chinese group/design-root" style="font-family: 'Open Sans', sans-serif;">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4 justify-between">
+<h1 class="text-text-heading dark:text-gray-100 text-2xl font-bold font-display tracking-tighter">需求广场</h1>
+<button class="flex min-w-[70px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-primary text-text-heading text-sm font-semibold leading-normal font-body">
+<span class="truncate">发布</span>
+</button>
+</div>
+<div class="px-4 pb-3">
+<label class="flex flex-col min-w-40 h-11 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-subtle flex border-none bg-white dark:bg-gray-800 items-center justify-center pl-3.5 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-text-body dark:text-gray-300 focus:outline-0 focus:ring-0 border-none bg-white dark:bg-gray-800 h-full placeholder:text-text-subtle dark:placeholder:text-gray-500 pl-2 text-base font-normal font-body" placeholder="搜索需求" value=""/>
+</div>
+</label>
+</div>
+</header>
+<main class="flex flex-col gap-3 px-4 py-1 pb-4">
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-gray-800 p-4 shadow-card">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10" data-alt="Avatar of Alice" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpuyxrZtzoZ6Q9NTvcBft_CuEGnapUXvK0raCLoPMV0pkhUUDD4JXh40El-40DCnZRK8xGGPSQL8_f5lVy6n1jjnNpAE3YDOiro4HbR9ruNRq7TOq0o6y2hgeJneAADATJzW7qVgDiZj5PR2CeioXUEWroWyLnonKgTfbEXcxFkL9z9irsa4wqwpszb-BQszfkX2UYP_NDJvKQpDPxMlG8dbRZEIUenR0co2Zc4vAknFLfFQ0ywhzMwwrJbN5uOMMDXRGXoKfvg0g");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-text-heading dark:text-gray-100 text-sm font-semibold font-body leading-normal">Alice</p>
+<p class="text-text-subtle dark:text-gray-400 text-xs font-normal font-body leading-normal">5分钟前</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<div class="flex items-center gap-1 rounded-md bg-secondary/20 dark:bg-secondary/30 px-2 py-1 text-xs font-semibold text-secondary dark:text-yellow-300 font-body">
+<span class="material-symbols-outlined text-sm">link</span>
+<span>关联项目</span>
+</div>
+<div class="flex items-center gap-1 rounded-md bg-gray-100 dark:bg-gray-700 px-2 py-1 text-xs font-semibold text-text-body dark:text-gray-300 font-body">
+<span class="material-symbols-outlined text-sm">public</span>
+<span>远程</span>
+</div>
+</div>
+<p class="text-text-body dark:text-gray-300 text-sm font-normal font-body leading-relaxed">
+                    寻找一位UI/UX设计师合作一个个人项目，主要是关于一个帮助人们建立积极习惯的APP。需要一些对用户心理学有了解的朋友一起头脑风暴！<a class="text-primary font-semibold ml-1" href="#">展开</a>
+</p>
+<div class="flex justify-end">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-primary text-text-heading text-sm font-semibold leading-normal font-body">
+<span class="truncate">感兴趣</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-gray-800 p-4 shadow-card">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10" data-alt="Avatar of Bob" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDoHobLICEeS4tDLJzkWENl7VdLWOb_yrSdUdboiMryqN2VOqDdqILSSn_hmgmsQF_JZf2sGl_yMnP2W2gm2sFDobqkes0vxf_5qTVbZlcFzqcIqQOMYZuszFlqaQRouLvNE-DjGYjOgYKF_IS-GDci2OqIqCnFndwdZ72IiCOwvoE1Xxba4_3xlvy9MJ000LLTXcDuBFugvRshzzHbr768kT5nG_k3Fjk_LG9vhQ5eMEW3TfEoe067aftfcftqyCkkg6Lryg-2kbM");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-text-heading dark:text-gray-100 text-sm font-semibold font-body leading-normal">Bob</p>
+<p class="text-text-subtle dark:text-gray-400 text-xs font-normal font-body leading-normal">1小时前</p>
+</div>
+</div>
+<p class="text-text-body dark:text-gray-300 text-sm font-normal font-body leading-relaxed">
+                    最近在研究如何开一家小小的咖啡店，有没有有相关经验的朋友可以分享一下心得？比如选址、供应商、或者运营上的小技巧都可以。完整的需求描述比较长，点击展开可以看到更多细节...<a class="text-primary font-semibold ml-1" href="#">展开</a>
+</p>
+<div class="flex justify-end">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-primary text-text-heading text-sm font-semibold leading-normal font-body">
+<span class="truncate">感兴趣</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-gray-800 p-4 shadow-card">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10" data-alt="Avatar of Carol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAb-h0tqNRszXg-6hBav8Vh8QjMECg0WApgA6BGHdXxJ6hw-rSxnTwnfxdeoW9ggXlcND1TAVEoLke5Rq9BQ_cgRClYadW2fkmGDaYoSQGALZd-qqpC6naV9pOugEZRDs6W7lWK0KMTGvBI8BVnUPqpngbhZGRYLNBzxzFmbL3wt5v61e4xBB-3U9CUXBB-PpKlIz_ujgggEmTMkZefJ48BK0JJsvkIW9Se2e773LnfqenkmT7spinjn-9EZug-lewogLCn1LKPiYM");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-text-heading dark:text-gray-100 text-sm font-semibold font-body leading-normal">Carol</p>
+<p class="text-text-subtle dark:text-gray-400 text-xs font-normal font-body leading-normal">昨天</p>
+</div>
+</div>
+<p class="text-text-body dark:text-gray-300 text-sm font-normal font-body leading-relaxed">
+                    计划在本周末组织一次本地社区的徒步活动，正在寻找一位同样热爱户外运动的伙伴一起策划路线和准备物资。更多详情可以点击展开查看哦。
+                </p>
+<div class="flex justify-end">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-primary text-text-heading text-sm font-semibold leading-normal font-body">
+<span class="truncate">感兴趣</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>
