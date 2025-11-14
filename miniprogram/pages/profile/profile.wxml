@@ -1,0 +1,180 @@
+<!--个人主页-->
+<view class="profile-page">
+  <!-- 头部区域 -->
+  <view class="header-section">
+    <view class="header-bg"></view>
+    <view class="header-content">
+      <!-- 举报按钮 -->
+      <view class="report-btn" bindtap="onReport">举报</view>
+      
+      <!-- 头像 -->
+      <view class="avatar-wrapper">
+        <image class="avatar" src="{{userInfo.avatar}}" mode="aspectFill"></image>
+        <view class="avatar-border"></view>
+      </view>
+      
+      <!-- 昵称和位置 -->
+      <view class="user-info">
+        <text class="nickname">{{userInfo.nickname}}</text>
+        <text class="location-status">{{userInfo.location}} | {{userInfo.onlineStatus}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 个人标签区域 -->
+  <scroll-view class="tags-scroll" scroll-x="true" show-scrollbar="{{false}}">
+    <view class="tags-container">
+      <view class="tag tag-personal" wx:for="{{userInfo.tags}}" wx:key="index">
+        {{item}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 关注数据 -->
+  <view class="stats-section">
+    <view class="stat-item">
+      <text class="stat-number">{{userInfo.followingCount}}</text>
+      <text class="stat-label">关注数</text>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <text class="stat-number">{{userInfo.followersCount}}</text>
+      <text class="stat-label">受关注数</text>
+    </view>
+  </view>
+
+  <!-- 主要内容区域 -->
+  <view class="main-content">
+    <!-- 个人信息区域 -->
+    <view class="personal-section">
+      <!-- 爱好 -->
+      <view class="section-block" wx:if="{{userInfo.hobbies.length > 0}}">
+        <text class="section-title">爱好</text>
+        <view class="hobbies-grid">
+          <view class="hobby-item" wx:for="{{userInfo.hobbies}}" wx:key="index">
+            <view class="hobby-icon" style="background-color: {{item.bgColor}}">
+              <text class="icon">{{item.icon}}</text>
+            </view>
+            <text class="hobby-label">{{item.label}}</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 技能 -->
+      <view class="section-block" wx:if="{{userInfo.skills.length > 0}}">
+        <text class="section-title">技能</text>
+        <view class="skills-container">
+          <view class="tag tag-skill" wx:for="{{userInfo.skills}}" wx:key="index">
+            {{item}}
+          </view>
+        </view>
+      </view>
+
+      <!-- 照片 -->
+      <view class="section-block" wx:if="{{userInfo.photos.length > 0}}">
+        <text class="section-title">照片</text>
+        <view class="photos-grid">
+          <image 
+            class="photo-item" 
+            wx:for="{{userInfo.photos}}" 
+            wx:key="index"
+            src="{{item}}" 
+            mode="aspectFill"
+            bindtap="onPreviewPhoto"
+            data-index="{{index}}"
+          ></image>
+        </view>
+      </view>
+    </view>
+
+    <!-- 分隔线 -->
+    <view class="divider"></view>
+
+    <!-- 商业信息区域 -->
+    <view class="business-section">
+      <!-- 我能提供的 -->
+      <view class="section-block">
+        <text class="section-title">我能提供的 <text class="required">*</text></text>
+        <view class="section-content">
+          <view class="text-item" wx:for="{{userInfo.canProvide}}" wx:key="index">
+            • {{item}}
+          </view>
+        </view>
+        <view class="ai-tags">
+          <view class="tag tag-resource" wx:for="{{userInfo.canProvideTags}}" wx:key="index">
+            {{item}}
+          </view>
+        </view>
+      </view>
+
+      <!-- 我正在做 -->
+      <view class="section-block">
+        <text class="section-title">我正在做 <text class="required">*</text></text>
+        <view class="section-content">
+          <view class="text-item" wx:for="{{userInfo.currentProjects}}" wx:key="index">
+            • {{item}}
+          </view>
+        </view>
+      </view>
+
+      <!-- 合作方式偏好 -->
+      <view class="section-block">
+        <text class="section-title">合作方式偏好 <text class="required">*</text></text>
+        <view class="section-content">
+          <text class="text-content">{{userInfo.collaborationPreference}}</text>
+        </view>
+      </view>
+
+      <!-- 工作经验 -->
+      <view class="section-block" wx:if="{{userInfo.workExperience}}">
+        <text class="section-title">工作经验</text>
+        <view class="section-content">
+          <text class="text-content">{{userInfo.workExperience}}</text>
+        </view>
+        <view class="ai-tags">
+          <view class="tag tag-skill" wx:for="{{userInfo.workExperienceTags}}" wx:key="index">
+            {{item}}
+          </view>
+        </view>
+      </view>
+
+      <!-- 补充资料 -->
+      <view class="section-block" wx:if="{{userInfo.additionalMaterials.length > 0}}">
+        <text class="section-title">补充资料</text>
+        <view class="materials-grid">
+          <image 
+            class="material-item" 
+            wx:for="{{userInfo.additionalMaterials}}" 
+            wx:key="index"
+            src="{{item}}" 
+            mode="aspectFill"
+            bindtap="onPreviewMaterial"
+            data-index="{{index}}"
+          ></image>
+        </view>
+      </view>
+    </view>
+
+    <!-- 分隔线 -->
+    <view class="divider"></view>
+
+    <!-- 合作评价 -->
+    <view class="reviews-section">
+      <text class="section-title">合作评价</text>
+      <!-- 评价列表将在后续添加 -->
+      <view class="empty-state">
+        <text class="empty-text">暂无评价</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部操作栏占位 -->
+  <view class="bottom-placeholder"></view>
+
+  <!-- 底部操作栏 -->
+  <view class="bottom-actions">
+    <button class="btn btn-outline" bindtap="onFollow">关注</button>
+    <button class="btn btn-primary" bindtap="onChat">发起聊天</button>
+  </view>
+</view>
+

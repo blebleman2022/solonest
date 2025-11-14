@@ -1,0 +1,103 @@
+/* 全局样式 */
+page {
+  background-color: #F8F7F5;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #333333;
+}
+
+/* 品牌色系 */
+.color-primary { color: #FFB347; }
+.color-secondary { color: #81D4FA; }
+.color-accent { color: #CE93D8; }
+
+.bg-primary { background-color: #FFB347; }
+.bg-secondary { background-color: #81D4FA; }
+.bg-accent { background-color: #CE93D8; }
+
+/* 文字颜色 */
+.text-primary { color: #333333; }
+.text-secondary { color: #666666; }
+.text-auxiliary { color: #999999; }
+
+/* 卡片样式 */
+.card {
+  background-color: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+}
+
+.card-medium {
+  border-radius: 32rpx;
+}
+
+.card-large {
+  border-radius: 40rpx;
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: 8rpx 24rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  margin-right: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.tag-skill {
+  background-color: #E3F2FD;
+  color: #1976D2;
+}
+
+.tag-resource {
+  background-color: #E8F5E9;
+  color: #388E3C;
+}
+
+.tag-collaboration {
+  background-color: #F3E5F5;
+  color: #7B1FA2;
+}
+
+.tag-personal {
+  background-color: #FFF3E0;
+  color: #FF9800;
+}
+
+/* 按钮样式 */
+.btn {
+  border-radius: 16rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  padding: 24rpx 48rpx;
+}
+
+.btn-primary {
+  background-color: #FFB347;
+  color: #FFFFFF;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2rpx solid #FFB347;
+  color: #FFB347;
+}
+
+/* 分隔线 */
+.divider {
+  height: 2rpx;
+  background-color: #E0E0E0;
+  margin: 48rpx 0;
+}
+
+/* 工具类 */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.text-center { text-align: center; }
+.font-bold { font-weight: bold; }
+

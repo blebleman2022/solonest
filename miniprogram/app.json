@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/profile/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFB347",
+    "navigationBarTitleText": "Solonest",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F8F7F5"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
+
